@@ -209,7 +209,7 @@ export default function Valentine() {
                         </div>
                         {
                             !theySaidYes ?
-                                <h1 className="font-boogaloo text-5xl text-center italic text-[#BD1E91]">
+                                <h1 className="font-boogaloo text-2xl lg:text-5xl text-center italic text-[#BD1E91]">
                                     {
                                         name ? (
                                             <h1>
@@ -221,7 +221,7 @@ export default function Valentine() {
                                     }
                                 </h1>
                                 :
-                                <h2 className="font-boogaloo text-5xl text-center italic text-[#BD1E91]">
+                                <h2 className="font-boogaloo text-2xl lg:text-5xl text-center italic text-[#BD1E91]">
                                     {yesResponses[Math.floor(Math.random() * (yesResponses.length - 1))]}
                                 </h2>
 

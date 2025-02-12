@@ -16,6 +16,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { useState } from "react"
 import { useRef } from "react"
+import ribbon from '../assets/ribbon.svg'
 
 export default function ShareDialog() {
     const linkInput = useRef()
@@ -48,6 +49,9 @@ export default function ShareDialog() {
                 </Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-md bg-[#FFF3F5]">
+                <div className="absolute left-[-2rem] top-[-2rem]">
+                    <img src={ribbon} className="h-20 rotate-[-45deg] " alt="" />
+                </div>
                 <DialogHeader>
                     <DialogTitle className="text-[#662929]">Share the Love: Customize Your Invitation</DialogTitle>
                     <DialogDescription className="text-[#662929]">
