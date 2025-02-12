@@ -34,7 +34,7 @@ import pop from './assets/pop.mp3'
 export default function Valentine() {
 
 
-   
+
 
     const { name } = useParams()
 
@@ -210,7 +210,15 @@ export default function Valentine() {
                         {
                             !theySaidYes ?
                                 <h1 className="font-boogaloo text-5xl text-center italic text-[#BD1E91]">
-                                    {`${name ? name + " ,w" : "W"}ill you be my Valentine?`}
+                                    {
+                                        name ? (
+                                            <h1>
+                                                <span className="capitalize">{name}</span>, will you be my Valentine?
+                                            </h1>
+                                        ) : (
+                                            <h1>Will you be my Valentine?</h1>
+                                        )
+                                    }
                                 </h1>
                                 :
                                 <h2 className="font-boogaloo text-5xl text-center italic text-[#BD1E91]">

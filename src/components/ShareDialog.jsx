@@ -14,11 +14,29 @@ import {
 } from "@/components/ui/dialog"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { useState } from "react"
+import { useRef } from "react"
 
 export default function ShareDialog() {
+    const linkInput = useRef()
+
+    const copyToClipBoard = () => {
+        const text = linkInput.current.value;
+        navigator.clipboard.writeText(text)
+            .then(() => {
+                console.log("Text copied to clipboard");
+            })
+            .catch(err => {
+                console.error("Error copying text: ", err);
+            });
+    }
 
     let url = window.location.origin;
 
+    const [theLuckyPersonImSoFuckingJealous, setTheLuckyPersonImSoFuckingJealous] = useState("")
+
+
+    console.log(theLuckyPersonImSoFuckingJealous)
     return (
         <Dialog>
             <DialogTrigger asChild>
@@ -29,13 +47,25 @@ export default function ShareDialog() {
                     </div>
                 </Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-md">
+            <DialogContent className="sm:max-w-md bg-[#FFF3F5]">
                 <DialogHeader>
-                    <DialogTitle>Who is that lucky person?</DialogTitle>
-                    <DialogDescription>
-                        Anyone who has this link will be able to view this.
+                    <DialogTitle className="text-[#662929]">Share the Love: Customize Your Invitation</DialogTitle>
+                    <DialogDescription className="text-[#662929]">
+                        Add your crush’s name and create a one-of-a-kind invitation link for them.
                     </DialogDescription>
                 </DialogHeader>
+                <div>
+                    <Label htmlFor="name" className="sr-only">
+                        Name
+                    </Label>
+                    <Input
+                        id="name"
+                        className="focus:!outline-[#EC678B] text-[#662929]"
+                        value={theLuckyPersonImSoFuckingJealous}
+                        onChange={(e) => setTheLuckyPersonImSoFuckingJealous(e.target.value.trim())}
+                    />
+                </div>
+
                 <div className="flex items-center space-x-2">
                     <div className="grid flex-1 gap-2">
                         <Label htmlFor="link" className="sr-only">
@@ -43,21 +73,61 @@ export default function ShareDialog() {
                         </Label>
                         <Input
                             id="link"
-                            defaultValue={`${url}/`}
                             readOnly
+                            value={`${url}/${theLuckyPersonImSoFuckingJealous}`}
+                            className=" text-[#662929] focus:!outline-[#EC678B]"
+                            ref={linkInput}
                         />
                     </div>
-                    <Button type="submit" size="sm" className="px-3">
+                    <Button type="submit" size="sm" className="px-3 bg-[#EC678B] hover:bg-[#ec678ac4]" onClick={copyToClipBoard}>
                         <span className="sr-only">Copy</span>
-                        <Copy />
+                        <Copy color="white" />
                     </Button>
                 </div>
                 <DialogFooter className="sm:justify-start">
-                    <DialogClose asChild>
-                        <Button type="button" variant="secondary">
-                            Close
-                        </Button>
-                    </DialogClose>
+                    <p className="text-sm text-[#662929]">
+                        Made with ❤️ by{" "}
+                        <a
+                            href="https://www.linkedin.com/in/jesse-onyekwelu-4a8982275/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline"
+                        >
+                            Onyekwelu Jesse
+                        </a>
+                        . Follow me on{" "}
+                        <a
+                            href="https://github.com/d3uceY"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline"
+                        >
+                            GitHub
+                        </a>{" "}
+                        and{" "}
+                        <a
+                            href=""
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline"
+                        >
+                            Twitter
+                        </a>
+                        {" "}
+                        and,
+                        {" "}
+
+                        <a
+                            href="https://www.tiktok.com/@deuce.exe"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline"
+                        >
+                            Tiktok
+                        </a>
+                        .
+                    </p>
+
                 </DialogFooter>
             </DialogContent>
         </Dialog>
