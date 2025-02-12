@@ -54,7 +54,10 @@ export default {
   				'5': 'hsl(var(--chart-5))'
   			},
   			fontFamily: {
-  				'boogaloo': ['"Boogaloo"', 'cursive']
+  				boogaloo: [
+  					'Boogaloo"',
+  					'cursive'
+  				]
   			}
   		}
   	}

@@ -1,12 +1,15 @@
 import React from "react"
-import './App.css'
 import { useState } from "react"
+
+import './App.css'
 
 import { Howl } from "howler"
 
 import confetti from "canvas-confetti";
 
 import { useParams, useLocation } from "react-router-dom";
+
+import ShareDialog from "./components/ShareDialog";
 
 
 //cat images
@@ -17,6 +20,7 @@ import cat7 from './assets/cat-15.gif'
 import cat8 from './assets/cat-8.gif'
 import cat9 from './assets/cat-13.gif'
 
+//speaker images
 import speakerOnImg from './assets/speaker-on.svg'
 import speakerOffImg from './assets/speaker-off.svg'
 
@@ -215,7 +219,11 @@ export default function Valentine() {
                                 <h2 className="font-boogaloo text-5xl text-center italic text-[#BD1E91]">
                                     {yesResponses[Math.floor(Math.random() * (yesResponses.length - 1))]}
                                 </h2>
+
                         }
+                        <div className="mx-auto w-fit mt-10">
+                            <ShareDialog />
+                        </div>
                     </div>
                     {theySaidYes && " " ||
                         <div className="flex gap-4 mt-12 w-fit mx-auto items-center">

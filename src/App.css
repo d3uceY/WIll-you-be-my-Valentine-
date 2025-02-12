@@ -10,7 +10,9 @@
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.09296218487394958) 37%, rgba(255, 117, 143, 0.0844712885154062) 47%);
 }
 
-
+.share-btn:hover img {
+     bottom: 0;
+}
 
 .heartbeat {
         -webkit-animation: heartbeat 2s ease-in-out infinite both;
