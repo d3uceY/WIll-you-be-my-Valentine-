@@ -16,19 +16,22 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 
 export default function ShareDialog() {
+
+    let url = window.location.origin;
+
     return (
         <Dialog>
             <DialogTrigger asChild>
                 <Button variant="outline" className="bg-[#e52b5db7] hover:bg-[#e52b5d] hover:text-white text-white relative text-lg share-btn z-1">
                     Send to your crush
-                    <div className="absolute h-20 border bottom-0 overflow-hidden w-40">
+                    <div className="absolute h-20  bottom-0 overflow-hidden w-40">
                         <img src={cat} alt="" className="h-20 w-fit left-0 right-0 mx-auto absolute bottom-[-100%] transition-all z-[-2] " />
                     </div>
                 </Button>
             </DialogTrigger>
             <DialogContent className="sm:max-w-md">
                 <DialogHeader>
-                    <DialogTitle>Share link</DialogTitle>
+                    <DialogTitle>Who is that lucky person?</DialogTitle>
                     <DialogDescription>
                         Anyone who has this link will be able to view this.
                     </DialogDescription>
@@ -40,7 +43,7 @@ export default function ShareDialog() {
                         </Label>
                         <Input
                             id="link"
-                            defaultValue="https://ui.shadcn.com/docs/installation"
+                            defaultValue={`${url}/`}
                             readOnly
                         />
                     </div>

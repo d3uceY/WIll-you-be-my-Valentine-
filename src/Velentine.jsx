@@ -33,11 +33,8 @@ import pop from './assets/pop.mp3'
 
 export default function Valentine() {
 
-    const location = useLocation();
 
-    // console.log(location);
-
-    // console.log(window.location.origin)
+   
 
     const { name } = useParams()
 
@@ -221,9 +218,13 @@ export default function Valentine() {
                                 </h2>
 
                         }
-                        <div className="mx-auto w-fit mt-10">
-                            <ShareDialog />
-                        </div>
+                        {
+                            theySaidYes ? (
+                                <div className="mx-auto w-fit mt-10">
+                                    <ShareDialog />
+                                </div>
+                            ) : ""
+                        }
                     </div>
                     {theySaidYes && " " ||
                         <div className="flex gap-4 mt-12 w-fit mx-auto items-center">
