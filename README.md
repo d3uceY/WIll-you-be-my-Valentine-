@@ -51,9 +51,7 @@ To deploy the application, use one of the following:
 - **GitHub Pages** (for static deployments)
 
 ## License
-Specify license details if applicable.
+just give me credit if you end up using this a modifying, thanks
 
----
 
-Let me know if you need modifications!
 
