@@ -107,8 +107,8 @@ export default function ShareDialog() {
                             className="underline"
                         >
                             GitHub
-                        </a>{" "}
-                        and{" "}
+                        </a>,{" "}
+                        {" "}
                         <a
                             href=""
                             target="_blank"
@@ -116,9 +116,8 @@ export default function ShareDialog() {
                             className="underline"
                         >
                             Twitter
-                        </a>
+                        </a>,
                         {" "}
-                        and,
                         {" "}
 
                         <a
@@ -128,6 +127,16 @@ export default function ShareDialog() {
                             className="underline"
                         >
                             Tiktok
+                        </a>   {" "}
+                        and
+                        {" "}
+                        <a
+                            href="https://wa.me/message/MWWY2D746ARJD1"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="underline"
+                        >
+                            Whatsapp
                         </a>
                         .
                     </p>
