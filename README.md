@@ -6,13 +6,11 @@ This is a web application built using **React** and **Vite**. The project levera
 
 ## Tech Stack  
 - **Frontend:** React, Vite  
-- **Styling:** CSS/Tailwind (if applicable)  
-- **Routing:** React Router (if applicable)  
-- **State Management:** React Context/Redux (if applicable)  
-- **UI Components:** **ShadCN**  
+- **Styling:** CSS/Tailwind  
+- **Routing:** React Router   
+- **UI Components:** **ShadCN** 
 - **Animations & Effects:** **canvas-confetti**  
 - **Audio Management:** **Howl.js**  
-- **Hosting:** (Specify if deployed)  
 
 ## Installation and Setup  
 
