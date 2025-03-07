@@ -1,5 +1,5 @@
 
-# Will Yiu be my valentine?
+# Will You be my valentine?
 
 ## Description  
 This is a web application built using **React** and **Vite**. The project leverages modern frontend development tools to provide a seamless user experience with high performance.  
