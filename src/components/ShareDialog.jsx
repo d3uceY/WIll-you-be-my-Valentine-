@@ -21,9 +21,9 @@ import ribbon from '../assets/ribbon.svg'
 export default function ShareDialog() {
     const linkInput = useRef()
 
-    const copyToClipBoard = () => {
+    const copyToClipBoard = async () => {
         const text = linkInput.current.value;
-        navigator.clipboard.writeText(text)
+        await navigator.clipboard.writeText(text)
             .then(() => {
                 console.log("Text copied to clipboard");
             })
@@ -36,8 +36,6 @@ export default function ShareDialog() {
 
     const [theLuckyPersonImSoFuckingJealous, setTheLuckyPersonImSoFuckingJealous] = useState("")
 
-
-    console.log(theLuckyPersonImSoFuckingJealous)
     return (
         <Dialog>
             <DialogTrigger asChild>
@@ -48,7 +46,7 @@ export default function ShareDialog() {
                     </div>
                 </Button>
             </DialogTrigger>
-            <DialogContent className="sm:max-w-md bg-[#FFF3F5]">
+            <DialogContent className="sm:max-w-md bg-[#FFF3F5] rounded-tl-3xl">
                 <div className="absolute left-[-2rem] top-[-2rem]">
                     <img src={ribbon} className="h-20 rotate-[-45deg] " alt="" />
                 </div>
