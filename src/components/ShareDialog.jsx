@@ -107,25 +107,6 @@ export default function ShareDialog() {
                             GitHub
                         </a>,{" "}
                         {" "}
-                        <a
-                            href=""
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="underline"
-                        >
-                            Twitter
-                        </a>,
-                        {" "}
-                        {" "}
-
-                        <a
-                            href="https://www.tiktok.com/@deuce.exe"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="underline"
-                        >
-                            Tiktok
-                        </a>   {" "}
                         and
                         {" "}
                         <a
