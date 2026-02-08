@@ -210,26 +210,18 @@ export default function Valentine() {
                         {
                             !theySaidYes ?
                                 <h1 className="font-boogaloo text-2xl lg:text-5xl text-center italic text-[#BD1E91]">
-                                    {
-                                        name ? (
-                                            <h1>
-                                                <span className="capitalize">{name}</span>, will you be my Valentine?
-                                            </h1>
-                                        ) : (
-                                            <h1>Will you be my Valentine?</h1>
-                                        )
-                                    }
+                                    <h1>Tina, will you be my Valentine?</h1>
                                 </h1>
                                 :
                                 <h2 className="font-boogaloo text-2xl lg:text-5xl text-center italic text-[#BD1E91]">
-                                    {yesResponses[Math.floor(Math.random() * (yesResponses.length - 1))]}
+                                   That’s my girlll love you pookie🧸❤️
                                 </h2>
 
                         }
                         {
                             theySaidYes ? (
                                 <div className="mx-auto w-fit mt-10">
-                                    <ShareDialog />
+                                    {/* <ShareDialog /> */}
                                 </div>
                             ) : ""
                         }
